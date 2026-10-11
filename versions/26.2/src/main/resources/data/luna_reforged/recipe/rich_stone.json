@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "GTG",
+    " O ",
+    "GBG"
+  ],
+  "key": {
+    "G": "minecraft:gold_block",
+    "T": "minecraft:trident",
+    "O": "minecraft:obsidian",
+    "B": "minecraft:bow"
+  },
+  "result": {
+    "id": "luna_reforged:rich_stone",
+    "count": 1
+  }
+}

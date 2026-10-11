@@ -1,0 +1,8 @@
+.gradle/
+.kotlin/
+**/build/
+**/run/
+references/
+.idea/
+*.log
+__pycache__/

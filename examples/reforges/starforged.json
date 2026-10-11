@@ -1,0 +1,8 @@
+{
+  "id": "starforged",
+  "name": "<gradient:#C8B6FF>星铸</gradient:#7DE2FC>",
+  "description": ["&a+6% &f近战伤害", "&a+5% &f下落攻击伤害"],
+  "targets": ["melee"],
+  "damage": 1.06,
+  "critical": 1.05
+}

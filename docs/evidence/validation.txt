@@ -1,0 +1,374 @@
+Luna Reforged 0.4.0 / Kotlin LunaCore 0.3.0 - Windows local checks, 2026-09-30.
+Game checks use development source sets and the packaged LunaCore runtime.
+
+verify26-040-final.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+[22:36:08] [Server thread/INFO] (Minecraft) [STDOUT]: Verified: 44 numeric-first colored descriptions, accepted-hit ignite/frost/life-steal, projectile proc snapshot, shared cooldown and expiry, distance/health thresholds and fall/fire/projectile defense scopes
+[22:36:08] [Server thread/INFO] (Minecraft) [STDOUT]: Verified: gradient RGB and Unicode, display prefix and anvil rename, legacy equipment migration, original-pool config, empty-slot random reforging, fixed-price and repeat stones, save/network profiles, receipts and replay rejection, falling-attack threshold, offhand, environmental defense and void exclusion, actual damage Mixin, conditions, attributes, projectile snapshot and exactly-once kill XP
+[22:36:08] [Server thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_SERVER_CHECKS_PASSED
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Verified: 44 numeric-first colored descriptions, accepted-hit ignite/frost/life-steal, projectile proc snapshot, shared cooldown and expiry, distance/health thresholds and fall/fire/projectile defense scopes
+Verified: gradient RGB and Unicode, display prefix and anvil rename, legacy equipment migration, original-pool config, empty-slot random reforging, fixed-price and repeat stones, save/network profiles, receipts and replay rejection, falling-attack threshold, offhand, environmental defense and void exclusion, actual damage Mixin, conditions, attributes, projectile snapshot and exactly-once kill XP
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+BUILD SUCCESSFUL in 34s
+
+verify121-040-final.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+[22:36:28] [Server thread/INFO] (Minecraft) [STDOUT]: Verified: 44 numeric-first colored descriptions, accepted-hit ignite/frost/life-steal, projectile proc snapshot, shared cooldown and expiry, distance/health thresholds and fall/fire/projectile defense scopes
+[22:36:28] [Server thread/INFO] (Minecraft) [STDOUT]: Verified: gradient RGB and Unicode, display prefix and anvil rename, legacy equipment migration, original-pool config, empty-slot random reforging, fixed-price and repeat stones, save/network profiles, receipts and replay rejection, falling-attack threshold, offhand, environmental defense and void exclusion, actual damage Mixin, conditions, attributes, projectile snapshot and exactly-once kill XP
+[22:36:28] [Server thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_SERVER_CHECKS_PASSED
+Verified: 44 numeric-first colored descriptions, accepted-hit ignite/frost/life-steal, projectile proc snapshot, shared cooldown and expiry, distance/health thresholds and fall/fire/projectile defense scopes
+Verified: gradient RGB and Unicode, display prefix and anvil rename, legacy equipment migration, original-pool config, empty-slot random reforging, fixed-price and repeat stones, save/network profiles, receipts and replay rejection, falling-attack threshold, offhand, environmental defense and void exclusion, actual damage Mixin, conditions, attributes, projectile snapshot and exactly-once kill XP
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+BUILD SUCCESSFUL in 45s
+
+build121-040-final.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+BUILD SUCCESSFUL in 18s
+
+preview26-fabric-client-040.log
+[22:41:38] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+[22:41:40] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+[22:41:42] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+[22:41:49] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+[22:41:53] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+[22:41:55] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+[22:41:57] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 55s
+
+preview26-fabric-server-040.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+BUILD SUCCESSFUL in 1m 55s
+
+preview26-neoforge-client-040.log
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 56s
+
+preview26-neoforge-server-040.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+BUILD SUCCESSFUL in 1m 30s
+
+preview121-fabric-client-040.log
+[22:32:31] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+[22:32:33] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_TOOLTIP_CURSOR_VERIFIED
+[22:32:33] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+[22:32:35] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+[22:32:42] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+[22:32:46] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+[22:32:48] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+[22:32:50] [Render thread/INFO] (Minecraft) [STDOUT]: LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 1m 1s
+
+preview121-fabric-server-040.log
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+Luna Reforged: rule, bounded-price, target, stone and uniform-selection checks passed
+BUILD SUCCESSFUL in 1m 34s
+
+preview121-neoforge-client-040.log
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_TOOLTIP_CURSOR_VERIFIED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 1m 2s
+
+preview121-neoforge-server-040.log
+BUILD SUCCESSFUL in 1m 40s
+
+license-030.log
+PASS: real Kotlin core through Java SAM/default methods; 1000 jobs; at most 4 admitted including queued uploads, configurable workers; allocation-free saturation, failures and 32 close-during-build races
+PASS: fabric release runs JVM 25 Kotlin policies using only its nested unmodified stdlib, canonical loader identity and license notices (not a game launch)
+PASS: Kotlin cache interface, oversized active-scene reuse, 4096 meshes over 200 frames, inactive LRU retirement, idle expiry, identity keys, upload failure, complete/idempotent disposal, allocation-free cached frames (no GPU/runtime claim)
+PASS: neoforge release runs JVM 25 Kotlin policies using only its nested unmodified stdlib, canonical loader identity and license notices (not a game launch)
+PASS: fabric-alone selects and runs Kotlin 2.4.0
+PASS: fabric-with-flk-newer selects and runs Kotlin 2.4.20
+PASS: neoforge-alone selects and runs Kotlin 2.4.0
+PASS: neoforge-with-kff-same selects and runs Kotlin 2.4.0
+PASS: neoforge-with-kff-and-newer selects and runs Kotlin 2.4.20
+PASS: 5 real-loader resolution cases select one stdlib and execute packaged Core through it
+PASS: Kotlin frame membership, equals/hashCode and canonical keys, duplicate marks, add-before-remove, callback retries, clear/empty frames, 2000 randomized legacy comparisons, 4096/20000-member allocation checks (no GPU/runtime claim)
+PASS: javac callers, nullable generics, primitive result, Java-static factory and Upload JVM default method
+BUILD SUCCESSFUL in 20s
+
+2026-10-01 / all-Kotlin source and tooling migration
+RESOURCE_GENERATOR_PARITY_PASSED: 36 JSON files, text identical after line-ending normalization
+RUNTIME_CORE_HASH_MATCH: eight JARs match release artifacts
+CLEAN_BUILD_PASSED: Gradle 9.5.1 / JDK 25 and Gradle 8.14.5 / JDK 21
+ARTIFACT_CHECKS_PASSED: four consumer JARs, two compatibility JARs, Kotlin Mixin metadata and intermediary targets
+[Minecraft 26 standalone servers] 2 x LUNA_REFORGED_SERVER_CHECKS_PASSED; BUILD SUCCESSFUL
+[Minecraft 26 fabric real client and server]
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+Both processes: BUILD SUCCESSFUL
+[Minecraft 26 neoforge real client and server]
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+Both processes: BUILD SUCCESSFUL
+[Minecraft 121 standalone servers] 2 x LUNA_REFORGED_SERVER_CHECKS_PASSED; BUILD SUCCESSFUL
+[Minecraft 121 fabric real client and server]
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+Both processes: BUILD SUCCESSFUL
+[Minecraft 121 neoforge real client and server]
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+Both processes: BUILD SUCCESSFUL
+
+[0.5.0 final local verification / 2026-10-11]
+Scope: Luna Reforged 0.5.0 + LunaCore 0.4.0; local only.
+
+[LunaCore final build]
+PASS: fabric release runs JVM 25 Kotlin policies using only its nested unmodified stdlib, canonical loader identity and license notices (not a game launch)
+PASS: neoforge release runs JVM 25 Kotlin policies using only its nested unmodified stdlib, canonical loader identity and license notices (not a game launch)
+PASS: fabric-alone selects and runs Kotlin 2.4.0
+PASS: fabric-with-flk-newer selects and runs Kotlin 2.4.20
+PASS: neoforge-alone selects and runs Kotlin 2.4.0
+PASS: neoforge-with-kff-same selects and runs Kotlin 2.4.0
+PASS: neoforge-with-kff-and-newer selects and runs Kotlin 2.4.20
+PASS: 5 real-loader resolution cases select one stdlib and execute packaged Core through it
+PASS: stale callbacks can await worker publication without holding the queue monitor
+PASS: linear stale partition preserves live FIFO order, exact cleanup and in-flight capacity
+SCHEDULER_ALLOCATION: 0 bytes for 1000000 saturated submissions
+PASS: real Kotlin core through Java SAM/default methods; 1000 jobs; at most 4 admitted including queued uploads, configurable workers; allocation-free saturation, failures and 32 close-during-build races
+PASS: failed measurement, negative/overflow size and suppressed cleanup retain exact resource ownership
+CACHE_ALLOCATION: 0 bytes for 2048000 warm accesses across 2000 frames
+PASS: Kotlin cache interface, oversized active-scene reuse, 4096 meshes over 200 frames, inactive LRU retirement, idle expiry, identity keys, upload failure, complete/idempotent disposal, allocation-free cached frames (no GPU/runtime claim)
+MEMBERSHIP_ALLOCATION: members=4096, frames=200, Kotlin=0 bytes, legacy=91814400 bytes
+MEMBERSHIP_ALLOCATION: members=20000, frames=100, Kotlin=0 bytes, legacy=218246400 bytes
+PASS: Kotlin frame membership, equals/hashCode and canonical keys, duplicate marks, add-before-remove, callback retries, clear/empty frames, 2000 randomized legacy comparisons, 4096/20000-member allocation checks (no GPU/runtime claim)
+PASS: javac callers, nullable generics, primitive result, Java-static factory and Upload JVM default method
+BUILD SUCCESSFUL in 9s
+
+[build/lunacore-0.4.0-final-26.2-server.log]
+LUNA_REFORGED_ACTIVE_ALLOCATION: 8096 bytes / 200000 lookups
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+LUNA_REFORGED_ACTIVE_ALLOCATION: 8096 bytes / 200000 lookups
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+BUILD SUCCESSFUL in 19s
+
+[build/lunacore-0.4.0-final-26.2-fabric-client.log]
+Using graphics backend OpenGL, using drivers: 3.3.0 Core Profile Context 26.8.1.260806
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 45s
+
+[build/lunacore-0.4.0-final-26.2-neoforge-client.log]
+Using graphics backend OpenGL, using drivers: 3.3.0 Core Profile Context 26.8.1.260806
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 42s
+
+[build/lunacore-0.4.0-final-1.21.1-server.log]
+LUNA_REFORGED_ACTIVE_ALLOCATION: 7904 bytes / 200000 lookups
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+LUNA_REFORGED_ACTIVE_ALLOCATION: 7904 bytes / 200000 lookups
+LUNA_REFORGED_SERVER_CHECKS_PASSED
+BUILD SUCCESSFUL in 28s
+
+[build/lunacore-0.4.0-final-1.21.1-fabric-client.log]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 232 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 51s
+
+[build/lunacore-0.4.0-final-1.21.1-neoforge-client.log]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+BUILD SUCCESSFUL in 44s
+
+[build/gradient-palette-26.2-fabric-client.log - after static palette adjustment]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: palette_nautical_before
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+BUILD SUCCESSFUL in 50s
+
+[build/gradient-palette-1.21.1-fabric-client.log - after static palette adjustment]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: palette_nautical_before
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+BUILD SUCCESSFUL in 1m 2s
+
+[Final Core artifact SHA-256; client + server copies checked]
+Kotlin-LunaCore-fabric-26.2-0.4.0.jar  f37dc89e625e02b5fe3641a78733a1b1692475969549eeb9de34ade438505482
+Kotlin-LunaCore-neoforge-26.2-0.4.0.jar  912adecc381b42f30ab5fdde200ff2403c47ea90834aa3716a7a9dcbc5dc41c7
+Kotlin-LunaCore-fabric-1.21.1-0.4.0+mc1.21.1.jar  93e7d4fed48e12e6ec42941bf0c6d6d4f7e3b6baae3f089ab4629ad22c9ddf0a
+Kotlin-LunaCore-neoforge-1.21.1-0.4.0+mc1.21.1.jar  dd687772725a5a592e575632c71dd64cb0794b16aea6d7969224a7a000dffe23
+
+[Final resources]
+Exactly six bilingual gradient endpoint changes; 123 translation keys and 44 names preserved.
+Final four consumer JARs rebuilt after palette changes; artifact metadata, mixins, resources and runtime-boundary verification passed.
+Game checks used dev source sets and actual final Core JARs. No final consumer-JAR third-party modpack launch. The additional Vulkan checks are recorded below.
+
+[2026-10-11 additional 26.2 Vulkan validation]
+Windows 11 / AMD Radeon RX 6900 XT / AMD proprietary driver 26.8.1 / Vulkan 1.4.315
+Fabric Loader 0.19.3 + Fabric API 0.159.0+26.2; NeoForge 26.2.0.75 + FML 11.0.16.
+Both clients: preferredGraphicsBackend:"vulkan"; NeoForge: config/fml.toml earlyWindowControl=false.
+Run server with -Ppreview, then client with -Ppreview -PpreviewBackend=vulkan.
+
+[Negative control: build/vulkan-26.2-neoforge-client.log]
+Default earlyWindowControl=true: GLFW error 65540 / GLFW_NO_API / VK_ERROR_NATIVE_WINDOW_IN_USE_KHR before world entry.
+Known loader issue: https://github.com/neoforged/NeoForge/issues/3230
+
+[Negative control: build/vulkan-neoforge-backend-reset-client.log]
+Requested vulkan but the game selected OpenGL
+The backend assertion rejected the run after the failed startup reset the preference.
+
+[First-display regression: build/tide-first-display-red-fabric-client.log]
+Rendered Tide colors were [3619652, 4359924], expected [6870734, 7252205] at tick 550
+Actual #373B44/#4286F4; expected #68D6CE/#6EA8ED. BUILD FAILED.
+Cause: preview explicitly inserted a legacy palette sample, then replaced it 50 server ticks later.
+Fix: remove the legacy insertion/replacement in both previews; check the same item from first display through hover and reload.
+
+[build/tide-fixed-26.2-build.log]
+BUILD SUCCESSFUL in 7s
+
+[build/tide-fixed-1.21.1-build.log]
+BUILD SUCCESSFUL in 11s
+
+[build/tide-fixed-vulkan-26.2-fabric-client.log]
+LUNA_REFORGED_RENDER_BACKEND: Vulkan / AMD Radeon RX 6900 XT / 1.4.315 AMD proprietary driver 26.8.1 (AMD proprietary shader compiler)
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=550 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=600 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=625 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: hovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=645 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: unhovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=736 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_RESOURCE_RELOAD_PASSED
+BUILD SUCCESSFUL in 56s
+
+[build/tide-fixed-vulkan-26.2-neoforge-client.log]
+LUNA_REFORGED_RENDER_BACKEND: Vulkan / AMD Radeon RX 6900 XT / 1.4.315 AMD proprietary driver 26.8.1 (AMD proprietary shader compiler)
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=550 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=600 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=625 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: hovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=645 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: unhovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=736 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_RESOURCE_RELOAD_PASSED
+BUILD SUCCESSFUL in 54s
+
+[build/tide-fixed-1.21.1-fabric-client.log]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_TOOLTIP_CURSOR_VERIFIED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+BUILD SUCCESSFUL in 57s
+
+[Actual screenshot pixel check: build/tide-fixed-pixel-checks.json]
+Both 26.2 loaders: first display, stationary wait, hover, leave, resource reload.
+Each Tide title region: #68D6CE=92 pixels; #6EA8ED=45 pixels; either old endpoint=0 pixels.
+Images read directly from game screenshots; pixels were not edited.
+Reload screenshots wait until the overlay is absent, then 20 more client ticks.
+Both clients and their paired dedicated servers exited successfully.

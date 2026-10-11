@@ -1,0 +1,3 @@
+# Official Gradle bootstrap scripts are vendored, not project application code.
+versions/**/gradlew linguist-vendored
+versions/**/gradlew.bat linguist-vendored

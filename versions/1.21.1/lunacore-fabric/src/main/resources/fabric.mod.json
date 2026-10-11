@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "lunacore",
+  "version": "${version}",
+  "name": "Kotlin LunaCore (1.21.1 compatibility)",
+  "environment": "*",
+  "license": "LGPL-3.0-or-later",
+  "authors": [
+    "linlunaire"
+  ],
+  "depends": {
+    "minecraft": "1.21.1",
+    "java": ">=21",
+    "fabricloader": ">=0.19.3"
+  }
+}

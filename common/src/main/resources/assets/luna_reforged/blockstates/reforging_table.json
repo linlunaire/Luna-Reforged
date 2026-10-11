@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "luna_reforged:block/reforging_table"
+    }
+  }
+}

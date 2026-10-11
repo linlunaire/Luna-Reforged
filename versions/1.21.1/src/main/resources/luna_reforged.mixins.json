@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "io.github.linlunaire.lunareforged.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "LivingEntityMixin",
+    "BlockMixin",
+    "ItemStackMixin",
+    "AnvilMenuMixin",
+    "EquipmentMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "AnvilScreenMixin"
+  ]
+}

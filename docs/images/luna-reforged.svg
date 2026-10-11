@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+  <title id="title">Luna Reforged crescent and crystal</title>
+  <defs>
+    <linearGradient id="moon" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eee4ff"/><stop offset="1" stop-color="#8aaeff"/>
+    </linearGradient>
+    <linearGradient id="crystal" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#eef9ff"/><stop offset=".5" stop-color="#bc8eff"/><stop offset="1" stop-color="#7465c4"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="54" fill="#151529"/>
+  <circle cx="128" cy="128" r="98" fill="none" stroke="#65598b" stroke-width="1.5"/>
+  <path d="M177 48a83 83 0 1 0 31 139A78 78 0 0 1 177 48Z" fill="url(#moon)"/>
+  <path d="m143 67 24 35-24 65-24-65Z" fill="url(#crystal)"/>
+  <path d="m143 67 0 100-24-65Z" fill="#b7a1f4"/>
+  <path d="m119 102 24 12 24-12" fill="none" stroke="#ecdcff" stroke-width="1.5"/>
+  <path d="m185 66 4 10 11 4-11 4-4 11-4-11-10-4 10-4Z" fill="#e9dcff"/>
+  <path d="M98 190h91l-10 13h-72Z" fill="#8b80b3"/>
+  <path d="M117 204h53v13h-53Z" fill="#645984"/>
+</svg>

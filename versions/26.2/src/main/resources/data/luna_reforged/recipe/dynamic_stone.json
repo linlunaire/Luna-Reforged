@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "IDI",
+    " P "
+  ],
+  "key": {
+    "I": "minecraft:iron_block",
+    "D": "minecraft:daylight_detector",
+    "P": "minecraft:phantom_membrane"
+  },
+  "result": {
+    "id": "luna_reforged:dynamic_stone",
+    "count": 1
+  }
+}

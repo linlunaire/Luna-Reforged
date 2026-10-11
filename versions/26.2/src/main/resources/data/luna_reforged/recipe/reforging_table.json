@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "AIA",
+    "OCO",
+    "OOO"
+  ],
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "I": "minecraft:iron_ingot",
+    "O": "minecraft:obsidian",
+    "C": "minecraft:crafting_table"
+  },
+  "result": {
+    "id": "luna_reforged:reforging_table",
+    "count": 1
+  }
+}

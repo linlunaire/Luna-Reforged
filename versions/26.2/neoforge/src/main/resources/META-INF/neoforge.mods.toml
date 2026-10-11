@@ -1,0 +1,29 @@
+license="GPL-3.0-only"
+[[mods]]
+modId="luna_reforged"
+version="${version}"
+displayName="Luna Reforged"
+authors="linlunaire"
+description="A native experience-powered reforging mod."
+[[mixins]]
+config="luna_reforged.mixins.json"
+[[mixins]]
+config="luna_reforged.neoforge.mixins.json"
+[[dependencies.luna_reforged]]
+modId="minecraft"
+type="required"
+versionRange="[26.2]"
+ordering="NONE"
+side="BOTH"
+[[dependencies.luna_reforged]]
+modId="neoforge"
+type="required"
+versionRange="[26.2.0.75,26.3)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.luna_reforged]]
+modId="lunacore"
+type="required"
+versionRange="[0.4.0,)"
+ordering="NONE"
+side="BOTH"
