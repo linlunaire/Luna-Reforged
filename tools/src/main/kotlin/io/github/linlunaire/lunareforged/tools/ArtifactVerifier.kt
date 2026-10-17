@@ -47,6 +47,11 @@ internal object ArtifactVerifier {
                         "Consumer contains a second runtime or plugin implementation: $path"
                     }
                     check(names.none { it.endsWith(".jar") }) { "Consumer must not embed Kotlin or LunaCore: $path" }
+                    for (notice in listOf("LICENSE", "NOTICE.md")) {
+                        check(zip.text("META-INF/luna-reforged/$notice") == root.resolve(notice).readText()) {
+                            "Packaged $notice differs from the current source: $path"
+                        }
+                    }
                     checkClasses(zip, if (version == "26.2") 69 else 65)
                     val required = listOf(
                         "luna_reforged.mixins.json", "${MOD_PACKAGE}ReforgeMenu.class", "${MOD_PACKAGE}ReforgeText.class",
@@ -69,6 +74,7 @@ internal object ArtifactVerifier {
                     }
                     if (loader == "fabric") {
                         val metadata = zip.json("fabric.mod.json")
+                        check(metadata["id"].asString == "luna_reforged" && metadata["version"].asString == MOD_VERSION) { "Invalid Fabric identity in $path" }
                         val depends = metadata.getAsJsonObject("depends")
                         check(depends["minecraft"].asString == version && depends["lunacore"]?.asString == ">=$CORE_VERSION" && !depends.has("transit_core")) { "Invalid Fabric dependencies in $path" }
                         check(metadata.getAsJsonObject("entrypoints").getAsJsonArray("main").map { it.asString } ==
@@ -98,6 +104,7 @@ internal object ArtifactVerifier {
                         }
                     } else {
                         val metadata = zip.text("META-INF/neoforge.mods.toml")
+                        check("modId=\"luna_reforged\"" in metadata && "version=\"$MOD_VERSION\"" in metadata) { "Invalid NeoForge identity in $path" }
                         check("modId=\"lunacore\"" in metadata && "versionRange=\"[$CORE_VERSION,)\"" in metadata && "transit_core" !in metadata && "[$version]" in metadata) { "Invalid NeoForge dependencies" }
                         check("${MOD_PACKAGE}neoforge/LunaNeoForge.class" in names) { "Missing NeoForge entry point" }
                         if (version == "26.2") {
@@ -115,45 +122,9 @@ internal object ArtifactVerifier {
                 println("PASS ${path.name}")
             }
         }
-        if (selectedVersion == null || selectedVersion == "1.21.1") {
-            for (loader in loaders) {
-                val path = root.resolve("build/release/1.21.1/Kotlin-LunaCore-$loader-1.21.1-$CORE_VERSION+mc1.21.1.jar")
-                checkCore(path, loader, 65)
-                rows += checksum(path)
-                println("PASS ${path.name}")
-            }
-        }
         val checksumName = if (selectedVersion == null) "checksums.json" else "checksums-$selectedVersion.json"
         writeJson(root.resolve("build/release/$checksumName"), rows)
         println("PASS: ${rows.size} artifacts, Java targets, runtime boundary, metadata, mixins, resources and translation parity")
-    }
-
-    fun checkCore(path: File, loader: String, maximumClassVersion: Int) {
-        check(path.isFile) { "Missing $path" }
-        ZipFile(path).use { zip ->
-            val names = zip.entries().asSequence().map { it.name }.toSet()
-            for (name in listOf("FrameMembership", "FrameGeometryCache")) {
-                check("${CORE_PACKAGE}collection/$name.class" in names) { "Missing LunaCore policy: $name" }
-            }
-            check("${CORE_PACKAGE}concurrent/BoundedTaskDispatcher.class" in names) { "Missing LunaCore dispatcher" }
-            check(names.none { it.startsWith(MOD_PACKAGE) || it.startsWith("kotlin/") }) { "LunaCore must keep Kotlin nested and exclude gameplay" }
-            check(names.none { it.startsWith("io/github/linlunaire/transitcore/") }) { "Obsolete core package in $path" }
-            check(names.count { it.endsWith(".jar") && "kotlin-stdlib" in it } == 1) { "Expected exactly one nested Kotlin standard library" }
-            check(names.any { "Kotlin-LICENSE.txt" in it } && names.any { "Kotlin-NOTICE.txt" in it } &&
-                names.any { "LunaCore-MIT.txt" in it } && names.any { it.endsWith("/licenses/GPL-3.0.txt") }) { "Missing LunaCore license notices" }
-            val text = zip.text(if (loader == "fabric") "fabric.mod.json" else "META-INF/neoforge.mods.toml")
-            check("LGPL-3.0-or-later" in text) { "Invalid LunaCore license metadata" }
-            if (loader == "fabric") {
-                val metadata = JsonParser.parseString(text).asJsonObject
-                check(metadata["id"].asString == "lunacore" && metadata["version"].asString.startsWith(CORE_VERSION)) { "Incorrect LunaCore version or ID" }
-            } else {
-                check(Regex("(?m)^modId\\s*=\\s*\"lunacore\"\\s*$").containsMatchIn(text) &&
-                    Regex("(?m)^version\\s*=\\s*\"${Regex.escape(CORE_VERSION)}(?:\\+mc1\\.21\\.1)?\"\\s*$").containsMatchIn(text)) { "Incorrect LunaCore ID/version" }
-                check("${CORE_PACKAGE}neoforge/LunaCoreNeoForge.class" in names) { "Missing renamed NeoForge entry point" }
-            }
-            check("transit_core" !in text) { "Obsolete core identity in $path" }
-            checkClasses(zip, maximumClassVersion)
-        }
     }
 
     private fun checkClasses(zip: ZipFile, maximum: Int) {

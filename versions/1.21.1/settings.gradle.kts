@@ -9,4 +9,4 @@ pluginManagement {
     }
 }
 rootProject.name = "Luna-Reforged-1.21.1"
-include("fabric", "neoforge", "lunacore-fabric", "lunacore-neoforge")
+include("fabric", "neoforge")

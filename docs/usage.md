@@ -11,7 +11,7 @@
 | 1.21.1 | 21 | Fabric Loader 0.19.3+ | 0.116.15+1.21.1 |
 | 1.21.1 | 21 | NeoForge 21.1.248+ | — |
 
-选择对应的 `Luna-Reforged-<加载器>-<游戏版本>-0.5.0.jar`。26.2 搭配 LunaCore 0.4.0；1.21.1 搭配本项目提供的 `0.4.0+mc1.21.1` 兼容前置。
+选择对应的 `Luna-Reforged-<加载器>-<游戏版本>-0.5.1.jar`，并从 [LunaCore 0.4.1 发行页](https://github.com/linlunaire/Kotlin-LunaCore/releases/tag/v0.4.1) 下载 `Kotlin-LunaCore-<加载器>-<游戏版本>-0.4.1.jar`。两个项目的游戏版本与加载器必须一致；辉月重铸发行包只包含辉月本身。
 
 将模组和前置 JAR 放入两端的 `mods` 文件夹。不要安装 `-sources.jar`，也不要重复安装前置。
 

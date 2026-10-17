@@ -13,7 +13,7 @@
     "java": ">=25",
     "fabricloader": ">=0.19.3",
     "fabric-api": "*",
-    "lunacore": ">=0.4.0"
+    "lunacore": ">=${lunacore_version}"
   },
   "entrypoints": {
     "main": [

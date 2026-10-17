@@ -11,16 +11,18 @@ plugins {
 val projectRoot = file("../..")
 val minecraftVersion = providers.gradleProperty("minecraft_version").get()
 val modVersion = providers.gradleProperty("mod_version").get()
+val lunaCoreVersion = providers.gradleProperty("lunacore_version").get()
+val lunaCoreRepository = providers.gradleProperty("lunacoreRepository")
+    .orElse("https://github.com/linlunaire/Kotlin-LunaCore/releases/download")
 
 subprojects {
     apply(plugin = "dev.architectury.loom-no-remap")
     apply(plugin = "org.jetbrains.kotlin.jvm")
-    val corePort = name.startsWith("lunacore-")
     val loader = if (name.endsWith("fabric")) "fabric" else "neoforge"
     group = "io.github.linlunaire"
-    version = if (corePort) "0.4.0+mc1.21.1" else modVersion
+    version = modVersion
     extensions.configure<BasePluginExtension> {
-        archivesName.set((if (corePort) "Kotlin-LunaCore" else "Luna-Reforged") + "-$loader-26.2")
+        archivesName.set("Luna-Reforged-$loader-$minecraftVersion")
     }
     extensions.configure<JavaPluginExtension> {
         toolchain.languageVersion.set(JavaLanguageVersion.of(25))
@@ -31,14 +33,13 @@ subprojects {
         coreLibrariesVersion = "2.4.0"
         compilerOptions.jvmTarget.set(JvmTarget.JVM_25)
         sourceSets.named("main") {
-            if (corePort) kotlin.srcDir(projectRoot.resolve("compat/lunacore/src/main/kotlin"))
-            else kotlin.srcDirs(
+            kotlin.srcDirs(
                 projectRoot.resolve("domain/src/main/kotlin"),
                 projectRoot.resolve("common/src/main/kotlin"),
                 rootProject.file("src/main/kotlin")
             )
         }
-        if (!corePort) sourceSets.named("test") {
+        sourceSets.named("test") {
             kotlin.srcDir(projectRoot.resolve("domain/src/test/kotlin"))
         }
     }
@@ -51,6 +52,17 @@ subprojects {
         maven("https://maven.fabricmc.net/")
         maven("https://neoforged.forgecdn.net/releases/")
         maven("https://maven.neoforged.net/releases/")
+        exclusiveContent {
+            forRepository {
+                ivy {
+                    name = "LunaCoreReleases"
+                    url = uri(lunaCoreRepository.get())
+                    patternLayout { artifact("v[revision]/[artifact]-[revision](-[classifier]).[ext]") }
+                    metadataSources { artifact() }
+                }
+            }
+            filter { includeModuleByRegex("io\\.github\\.linlunaire", "Kotlin-LunaCore-.*") }
+        }
     }
     val loom = extensions.getByType<LoomGradleExtensionAPI>()
     dependencies {
@@ -58,41 +70,33 @@ subprojects {
         add("implementation", "org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
         if (loader == "fabric") {
             add("implementation", "net.fabricmc:fabric-loader:" + rootProject.property("fabric_loader_version"))
-            if (!corePort) add("implementation", "net.fabricmc.fabric-api:fabric-api:" + rootProject.property("fabric_api_version"))
+            add("implementation", "net.fabricmc.fabric-api:fabric-api:" + rootProject.property("fabric_api_version"))
         } else add("neoForge", "net.neoforged:neoforge:" + rootProject.property("neoforge_version"))
-        if (corePort) add("include", "org.jetbrains.kotlin:kotlin-stdlib:2.4.0")
+        add("implementation", "io.github.linlunaire:Kotlin-LunaCore-$loader-$minecraftVersion:$lunaCoreVersion")
     }
     val sources = extensions.getByType<SourceSetContainer>()
-    if (!corePort) {
-        sources.named("main") {
-            resources.srcDirs(projectRoot.resolve("common/src/main/resources"), rootProject.file("src/main/resources"))
-        }
-        tasks.register<JavaExec>("checkRules") {
-            dependsOn("testClasses")
-            classpath = sources["test"].runtimeClasspath
-            mainClass.set("io.github.linlunaire.lunareforged.domain.RulesCheck")
-        }
-        tasks.named("check") { dependsOn("checkRules") }
-        tasks.named<Test>("test") {
-            enabled = false
-            dependsOn("checkRules")
-        }
+    sources.named("main") {
+        resources.srcDirs(projectRoot.resolve("common/src/main/resources"), rootProject.file("src/main/resources"))
+    }
+    tasks.register<JavaExec>("checkRules") {
+        dependsOn("testClasses")
+        classpath = sources["test"].runtimeClasspath
+        mainClass.set("io.github.linlunaire.lunareforged.domain.RulesCheck")
+    }
+    tasks.named("check") { dependsOn("checkRules") }
+    tasks.named<Test>("test") {
+        enabled = false
+        dependsOn("checkRules")
     }
     tasks.named<ProcessResources>("processResources") {
         inputs.property("version", project.version)
+        inputs.property("lunacore_version", lunaCoreVersion)
         filesMatching(listOf("fabric.mod.json", "META-INF/neoforge.mods.toml")) {
-            expand(mapOf("version" to project.version))
+            expand(mapOf("version" to project.version, "lunacore_version" to lunaCoreVersion))
         }
     }
     tasks.named<Jar>("jar") {
-        if (corePort) {
-            from(files(projectRoot.resolve("compat/lunacore/LICENSE"), projectRoot.resolve("compat/lunacore/NOTICE.md"))) {
-                into("META-INF/lunacore")
-            }
-            from(projectRoot.resolve("compat/lunacore/licenses")) { into("META-INF/lunacore/licenses") }
-        } else {
-            from(files(projectRoot.resolve("LICENSE"), projectRoot.resolve("NOTICE.md"))) { into("META-INF/luna-reforged") }
-        }
+        from(files(projectRoot.resolve("LICENSE"), projectRoot.resolve("NOTICE.md"))) { into("META-INF/luna-reforged") }
     }
     tasks.register<Copy>("releaseJar") {
         dependsOn("jar", "check", "sourcesJar")
@@ -114,12 +118,12 @@ subprojects {
             jvmArguments.add("-Xmx2G")
             programArguments.add("nogui")
         }
-        if (!corePort && rootProject.hasProperty("preview")) {
+        if (rootProject.hasProperty("preview")) {
             jvmArguments.add("-Dluna_reforged.preview=true")
             programArguments.add("nogui")
         }
     }
-    if (!corePort) loom.runs.named("client") {
+    loom.runs.named("client") {
         if (rootProject.hasProperty("preview")) {
             runDirectory.set(file("run/client-preview"))
             jvmArguments.add("-Dluna_reforged.preview=true")

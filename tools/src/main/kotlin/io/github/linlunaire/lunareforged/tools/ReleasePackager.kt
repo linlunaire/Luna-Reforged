@@ -7,27 +7,12 @@ import java.util.zip.ZipFile
 import java.util.zip.ZipOutputStream
 
 internal object ReleasePackager {
-    fun pack(root: File, core26: File, coreRoot: File) {
-        check((coreRoot.resolve("build.gradle").isFile || coreRoot.resolve("build.gradle.kts").isFile) &&
-            coreRoot.resolve("licenses/GPL-3.0.txt").isFile) { "Supply the matching complete LunaCore source repository" }
-        val policies = coreRoot.resolve("core/src/main/kotlin")
-        val compatibility = root.resolve("compat/lunacore/src/main/kotlin")
-        val policyNames = policies.walkTopDown().filter { it.isFile && it.extension == "kt" }.map { it.relativeTo(policies).invariantSeparatorsPath }.toSet()
-        val compatibilityNames = compatibility.walkTopDown().filter { it.isFile && it.extension == "kt" }.map { it.relativeTo(compatibility).invariantSeparatorsPath }.toSet()
-        check(policyNames.isNotEmpty() && policyNames == compatibilityNames && policyNames.all {
-            policies.resolve(it).readBytes().contentEquals(compatibility.resolve(it).readBytes())
-        }) { "The Java 21 compatibility policies differ from the supplied LunaCore sources" }
+    fun pack(root: File) {
         val files = linkedMapOf<String, File>()
-        val coreSource = root.resolve("build/release/Kotlin-LunaCore-$CORE_VERSION-source.zip")
-        SourceArchives.create(coreRoot, coreSource, "Kotlin-LunaCore")
-        files[coreSource.name] = coreSource
         for (version in minecraftVersions) {
             for (loader in loaders) {
                 val mod = root.resolve("build/release/$version/Luna-Reforged-$loader-$version-$MOD_VERSION.jar")
-                val core = if (version == "26.2") core26.resolve("Kotlin-LunaCore-$loader-26.2-$CORE_VERSION.jar")
-                    else root.resolve("build/release/$version/Kotlin-LunaCore-$loader-1.21.1-$CORE_VERSION+mc1.21.1.jar")
-                ArtifactVerifier.checkCore(core, loader, if (version == "26.2") 69 else 65)
-                for (path in listOf(mod, core)) files["$version/$loader/mods/${path.name}"] = path
+                files["$version/$loader/mods/${mod.name}"] = mod
             }
         }
         files["Luna-Reforged-$MOD_VERSION-source.zip"] = root.resolve("build/release/Luna-Reforged-$MOD_VERSION-source.zip")
@@ -79,19 +64,21 @@ internal object ReleasePackager {
         辉月重铸 $MOD_VERSION / Luna Reforged
 
         只选与你的 Minecraft 版本和加载器匹配的一个目录。
-        把该目录 mods 内的两个 JAR 放入客户端和服务端各自的 mods 文件夹。
-        LunaCore $CORE_VERSION 使用新 ID lunacore；升级时移除旧核心，并一起更新辉月重铸。
+        把该目录 mods 内的辉月重铸 JAR 放入客户端和服务端各自的 mods 文件夹。
+        另从 https://github.com/linlunaire/Kotlin-LunaCore/releases/tag/v$CORE_VERSION
+        下载同一 Minecraft 版本、同一加载器的 LunaCore $CORE_VERSION，放入两端的 mods 文件夹。
+        升级时移除旧核心，并一起更新辉月重铸。
 
         26.2：Java 25；Fabric Loader 0.19.3+ 或 NeoForge 26.2.0.75+。
         1.21.1：Java 21；Fabric Loader 0.19.3+ 或 NeoForge 21.1.248+。
         Fabric 还需另装对应版本的 Fabric API：0.159.0+26.2 或 0.116.15+1.21.1。
-        本包包含 LunaCore，不包含 Minecraft、加载器或 Fabric API。
+        本包只包含辉月重铸；LunaCore、Minecraft、加载器和 Fabric API 需另外安装。
 
         26.2 可使用原生 Vulkan。NeoForge 26.2.0.75 需将 config/fml.toml 的 earlyWindowControl 设为 false，
         关闭早期加载窗口，并在视频设置中启用 Vulkan 后重启；详情及实测范围见 docs/usage.md。
 
         合成配方和费用配置见 docs/usage.md，验证范围见 docs/verification.md。
         本次构建和运行验证结果见 docs/verification.md；开发实例检查不代表所有第三方整合包均兼容。
-        玩法源码在 Luna-Reforged-$MOD_VERSION-source.zip，原生前置完整源码在 Kotlin-LunaCore-$CORE_VERSION-source.zip。
+        本项目完整源码在 Luna-Reforged-$MOD_VERSION-source.zip。LunaCore 的源码与构建由它自己的仓库维护。
     """.trimIndent() + "\n"
 }

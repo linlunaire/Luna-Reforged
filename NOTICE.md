@@ -16,12 +16,11 @@ Luna Reforged is an independent native Minecraft adaptation, not an official Aux
 
 For behavioral comparison, libreforge 2026.39 (tag commit `957055ca5aa5c809d8af98fdbb6c3f58beb13f4d`) was inspected for trigger boundaries and attribute semantics. It is under its own Business Source License. Its source and binaries are not copied into this project's implementation or distributions; the native hooks, text parser and configuration schema are independently written here. Reference checkouts are excluded from source archives.
 
-## Kotlin LunaCore compatibility source
+## Kotlin LunaCore dependency
 
-- Upstream: https://github.com/linlunaire/Kotlin-LunaCore, version 0.4.0.
-- License: LGPL-3.0-or-later. Full terms and third-party notices are included in `compat/lunacore/`.
-- The three Minecraft-independent policy implementations are shared with LunaCore. This compatibility build adapts loader metadata, the Java target and packaging for Minecraft 1.21.1.
-- Kotlin stdlib 2.4.0 is bundled unchanged with its upstream license and notice.
+- Upstream: https://github.com/linlunaire/Kotlin-LunaCore, version 0.4.1.
+- License: LGPL-3.0-or-later. Complete sources, license texts and third-party notices are distributed by the LunaCore project.
+- LunaCore supplies the shared Kotlin runtime as a separately installed mod for both supported Minecraft versions. This project does not bundle its source or binaries.
 
 ## Assets
 

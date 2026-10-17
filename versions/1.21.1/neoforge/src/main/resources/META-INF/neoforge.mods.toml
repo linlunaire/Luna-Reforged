@@ -24,6 +24,6 @@ side="BOTH"
 [[dependencies.luna_reforged]]
 modId="lunacore"
 type="required"
-versionRange="[0.4.0,)"
+versionRange="[${lunacore_version},)"
 ordering="NONE"
 side="BOTH"

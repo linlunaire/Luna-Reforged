@@ -33,7 +33,7 @@
 - 保留装备原有名称、附魔和耐久，铁砧可正常改名。
 - 服务端可调整经验费用、添加自定义词缀，配置会自动同步至客户端。
 
-客户端和服务端均需安装 [Kotlin LunaCore](https://github.com/linlunaire/Kotlin-LunaCore)；Fabric 还需对应版本的 Fabric API。安装要求见 [使用说明](docs/usage.md)，实测范围见 [验证记录](docs/verification.md)。
+客户端和服务端均需另装 [Kotlin LunaCore 0.4.1](https://github.com/linlunaire/Kotlin-LunaCore/releases/tag/v0.4.1)，选择相同游戏版本与加载器；Fabric 还需对应版本的 Fabric API。安装要求见 [使用说明](docs/usage.md)，实测范围见 [验证记录](docs/verification.md)。
 
 ### 许可证
 

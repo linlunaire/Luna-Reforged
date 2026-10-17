@@ -1,3 +1,22 @@
+# 0.5.1 验证记录
+
+Windows 本地验证，2026-10-17。两条版本线均使用 LunaCore 仓库构建的 0.4.1，辉月仓库不再编译或打包核心副本。
+
+| 组合 | 构建与发行验包 | 独立服务端检查 | 客户端联机 |
+| --- | --- | --- | --- |
+| 26.2 Fabric | 通过 | 通过 | Vulkan；完整交易、渐变与资源重载通过 |
+| 26.2 NeoForge | 通过 | 通过 | Vulkan；完整交易、渐变与资源重载通过 |
+| 1.21.1 Fabric | 通过 | 通过 | OpenGL；完整交易、词缀预览通过 |
+| 1.21.1 NeoForge | 通过 | 通过 | OpenGL；完整交易、词缀预览通过 |
+
+四组均重新检查按钮随机重铸、定向石、自定义参数同步、铁砧改名与烬火、汲月、轻羽、潮汐预览，客户端和配套独立服务端正常退出。26.2 直接读取实际设备确认 Vulkan，在同一把三叉戟上检查潮汐首次显示、等待、悬停、移开及资源重载后的颜色一致；NeoForge 继续使用 `earlyWindowControl = false`。
+
+测试中的辉月来自开发 source set，LunaCore 由 Gradle 从本地发行镜像解析；八个实例的 `mods/` 均无手工前置。1.21.1 NeoForge 的 Loom 会在依赖映射时移除 JarJar 元数据，因此开发启动另通过 `forgeRuntimeLibrary` 接入 stdlib 2.4.0。其全部 990 个类与 LunaCore 内置库逐字节一致，运行类路径仅有这一版 stdlib。这个开发配置不会把运行库打进辉月 JAR。
+
+四个最终辉月发行 JAR 通过字节码目标、加载器依赖、Mixin 映射、44 个词缀资源和中英一致性检查；均不包含 LunaCore 类或嵌套运行库。完整源码与发行 ZIP 只收录辉月自身，安装时另下载对应 LunaCore。最终辉月 JAR 未额外装入第三方启动器整合包，以上联机结果对应所列开发实例。日志摘录与发行校验值见 [验证证据](evidence/validation.txt)。
+
+---
+
 # 0.5.0 验证记录
 
 Windows 本地验证，2026-10-11。辉月重铸 0.5.0 配套 LunaCore 0.4.0；1.21.1 使用 0.4.0+mc1.21.1 兼容前置。两种加载器均要求新 ID `lunacore`，运行时代码包为 `io.github.linlunaire.lunacore`。
@@ -123,7 +142,7 @@ LunaCore 主项目通过 `build`、最终 JAR 运行测试、真实加载器依�
 
 ## 复现
 
-使用可丢弃的 `versions/<版本>/<加载器>/run/` 测试实例，放入对应 LunaCore。测试会在 `(0,100,0)` 放置/移除方块并创建物品与生物，请勿指向真实存档。实例使用本机回环地址、离线模式，并按 Minecraft 要求处理 EULA。
+使用可丢弃的 `versions/<版本>/<加载器>/run/` 测试实例。自 0.5.1 起，Gradle 会自动解析并加载对应 LunaCore；先移走测试实例 `mods/` 中手工放置的旧前置，避免重复安装。测试会在 `(0,100,0)` 放置/移除方块并创建物品与生物，请勿指向真实存档。实例使用本机回环地址、离线模式，并按 Minecraft 要求处理 EULA。
 
 ```powershell
 # 26.2 使用 JDK 25，1.21.1 使用 JDK 21
@@ -133,7 +152,7 @@ LunaCore 主项目通过 `build`、最终 JAR 运行测试、真实加载器依�
 
 每个服务端必须同时出现 `LUNA_REFORGED_SERVER_CHECKS_PASSED` 和成功退出。只看到 `Done` 或退出码 0 不够，夹具失败会输出 `LUNA_REFORGED_SERVER_CHECKS_FAILED`。
 
-客户端在独立的 `run/client-preview/` 目录运行，避免 Windows 文件锁冲突。服务端和客户端各自的 `mods/` 都放对应前置。依次运行对应加载器的 `runServer -Ppreview`、`runClient -Ppreview`。固定端口为 26.2 Fabric 25760、26.2 NeoForge 25761、1.21.1 Fabric 25762、1.21.1 NeoForge 25763。`server.properties` 必须匹配端口。可用 `options.txt` 设置 `lang:zh_cn`、`guiScale:2`、`tutorialStep:none`、`particles:0`。
+客户端在独立的 `run/client-preview/` 目录运行，避免 Windows 文件锁冲突。前置由 Gradle 的运行依赖提供，服务端和客户端的 `mods/` 均无需再放 LunaCore。依次运行对应加载器的 `runServer -Ppreview`、`runClient -Ppreview`。固定端口为 26.2 Fabric 25760、26.2 NeoForge 25761、1.21.1 Fabric 25762、1.21.1 NeoForge 25763。`server.properties` 必须匹配端口。可用 `options.txt` 设置 `lang:zh_cn`、`guiScale:2`、`tutorialStep:none`、`particles:0`。
 
 没有 `-Ppreview` 时不注册预览 tick 监听。预览完成后客户端退出，服务端随断开退出。截图保存在客户端的 `screenshots/` 下。
 

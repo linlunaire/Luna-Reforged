@@ -37,9 +37,5 @@ registerTool("packageRelease", "release").configure {
         check(!providers.gradleProperty("minecraftVersion").isPresent) {
             "packageRelease requires all four builds; omit -PminecraftVersion."
         }
-        args(
-            providers.gradleProperty("lunacore26").orNull ?: error("Set -Plunacore26=<26.2 LunaCore JAR directory>"),
-            providers.gradleProperty("lunacoreSource").orNull ?: error("Set -PlunacoreSource=<LunaCore source directory>")
-        )
     }
 }

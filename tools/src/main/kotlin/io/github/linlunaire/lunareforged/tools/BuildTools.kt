@@ -5,8 +5,8 @@ import java.io.File
 import java.security.MessageDigest
 
 internal val json = GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create()
-internal const val MOD_VERSION = "0.5.0"
-internal const val CORE_VERSION = "0.4.0"
+internal const val MOD_VERSION = "0.5.1"
+internal const val CORE_VERSION = "0.4.1"
 internal val loaders = listOf("fabric", "neoforge")
 internal val minecraftVersions = listOf("26.2", "1.21.1")
 
@@ -18,8 +18,8 @@ fun main(args: Array<String>) {
         "verify" -> ArtifactVerifier.verify(root, args.getOrNull(2))
         "sources" -> SourceArchives.create(root, root.resolve("build/release/Luna-Reforged-$MOD_VERSION-source.zip"), "Luna-Reforged")
         "release" -> {
-            require(args.size == 4) { "release requires LunaCore JAR and source directories" }
-            ReleasePackager.pack(root, File(args[2]).canonicalFile, File(args[3]).canonicalFile)
+            require(args.size == 2) { "release only requires this repository" }
+            ReleasePackager.pack(root)
         }
         else -> error("Unknown command: ${args[0]}")
     }

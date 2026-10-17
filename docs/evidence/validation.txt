@@ -372,3 +372,119 @@ Each Tide title region: #68D6CE=92 pixels; #6EA8ED=45 pixels; either old endpoin
 Images read directly from game screenshots; pixels were not edited.
 Reload screenshots wait until the overlay is absent, then 20 more client ticks.
 Both clients and their paired dedicated servers exited successfully.
+
+
+Luna Reforged 0.5.1 / Kotlin LunaCore 0.4.1 - Windows local checks, 2026-10-17.
+Core dependencies were resolved from the LunaCore local Ivy release mirror.
+The eight development instance mods directories contain no manually copied Core JAR.
+Game checks use development source sets for Luna Reforged; final consumer JARs pass separate artifact verification.
+
+migration-0.5.1-26.2-server.log
+LUNA_REFORGED_SERVER_CHECKS_PASSED (Fabric and NeoForge)
+BUILD SUCCESSFUL
+
+migration-0.5.1-26.2-fabric-preview-client.log
+LUNA_REFORGED_RENDER_BACKEND: Vulkan / AMD Radeon RX 6900 XT / 1.4.315 AMD proprietary driver 26.8.1 (AMD proprietary shader compiler)
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=550 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=600 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=625 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: hovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=645 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: unhovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=736 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_RESOURCE_RELOAD_PASSED
+BUILD SUCCESSFUL
+
+Luna-Reforged-fabric-26.2-0.5.1.jar SHA-256 2c645a480d1ca866a5244f3ff2ec25852bf15efeb1d048dc2919b7fcc9e8d60e
+
+migration-0.5.1-26.2-neoforge-preview-client.log
+LUNA_REFORGED_RENDER_BACKEND: Vulkan / AMD Radeon RX 6900 XT / 1.4.315 AMD proprietary driver 26.8.1 (AMD proprietary shader compiler)
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=550 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=600 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=625 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: hovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=645 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_TIDE_HOVER_COLORS_PASSED: unhovered
+LUNA_REFORGED_TIDE_RENDERED_COLORS: tick=736 colors=[68d6ce, 6ea8ed]
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_RESOURCE_RELOAD_PASSED
+BUILD SUCCESSFUL
+
+Luna-Reforged-neoforge-26.2-0.5.1.jar SHA-256 a16a1973c984994d6038b045cfc9f091bb2888a84832d49af37e963d9d6e013a
+
+migration-0.5.1-1.21.1-server.log
+LUNA_REFORGED_SERVER_CHECKS_PASSED (Fabric and NeoForge)
+BUILD SUCCESSFUL
+
+migration-0.5.1-1.21.1-fabric-preview-client.log
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_TOOLTIP_CURSOR_VERIFIED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+BUILD SUCCESSFUL
+
+Luna-Reforged-fabric-1.21.1-0.5.1.jar SHA-256 59fc81fc08cb517042f170e71503c153cdc247162b0183c11425388f46e6edc7
+
+migration-0.5.1-1.21.1-neoforge-preview-client.log
+LUNA_REFORGED_PRESENTATION_ALLOCATION: 0 bytes / 100000 unchanged refreshes
+LUNA_REFORGED_PRESENTATION_CACHE_PASSED
+LUNA_REFORGED_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_TOOLTIP_CURSOR_VERIFIED
+LUNA_REFORGED_STONE_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_CUSTOM_CLIENT_SYNC_PASSED
+LUNA_REFORGED_ANVIL_CLIENT_ROUNDTRIP_PASSED
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: ember
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: siphoning
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: feathered
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+LUNA_REFORGED_NEW_AFFIX_PREVIEW_PASSED: nautical
+BUILD SUCCESSFUL
+
+Luna-Reforged-neoforge-1.21.1-0.5.1.jar SHA-256 adfe0997a98dc312080fc894b1e26f5dc0d516ed1ae5382cd8be487431859775
+
+1.21.1 NeoForge development runtime: Kotlin stdlib 2.4.0 only.
+All 990 class entries and other shared entries match Core bundled stdlib exactly.
+The nested JAR only adds META-INF/architectury-loom-nesting-metadata.json.
+Loom 1.11.458 removes JarJar metadata while remapping dependencies; forgeRuntimeLibrary supplies the same stdlib for development runs.
+Production Luna Reforged JARs still contain no Kotlin or LunaCore payload.
+
+migration-0.5.1-verify.log
+PASS Luna-Reforged-fabric-26.2-0.5.1.jar
+PASS Luna-Reforged-neoforge-26.2-0.5.1.jar
+PASS Luna-Reforged-fabric-1.21.1-0.5.1.jar
+PASS Luna-Reforged-neoforge-1.21.1-0.5.1.jar
+PASS: 4 artifacts, Java targets, runtime boundary, metadata, mixins, resources and translation parity
+BUILD SUCCESSFUL
