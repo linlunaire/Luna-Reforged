@@ -6,6 +6,7 @@
 <h4 align="center">辉月重铸 · 以月华淬炼锋芒</h4>
 
 <p align="center">
+  <a href="https://github.com/linlunaire/Luna-Reforged/releases/tag/v0.5.1"><img src="https://img.shields.io/badge/Release-0.5.1-7B8CC3" alt="Release 0.5.1"></a>
   <a href="docs/building.md"><img src="https://img.shields.io/badge/Kotlin-100%25-7F52FF?logo=kotlin&logoColor=white" alt="Kotlin 100%"></a>
   <a href="docs/compatibility.md"><img src="https://img.shields.io/badge/Minecraft-26.2%20%7C%201.21.1-5E9D34" alt="Minecraft 26.2 and 1.21.1"></a>
   <a href="docs/usage.md"><img src="https://img.shields.io/badge/Loaders-Fabric%20%7C%20NeoForge-8B76C5" alt="Fabric and NeoForge"></a>
@@ -14,6 +15,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/linlunaire/Luna-Reforged/releases/tag/v0.5.1">下载 0.5.1</a> ·
   <a href="docs/usage.md">安装与使用</a> ·
   <a href="docs/reforges.md">全部词缀</a> ·
   <a href="docs/custom-reforges.md">自定义词缀</a> ·
